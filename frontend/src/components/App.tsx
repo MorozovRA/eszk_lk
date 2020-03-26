@@ -15,7 +15,7 @@ const App: React.FC = () => {
             <Sider theme="light"
                    collapsed={showMenu}
                    collapsedWidth={0}>
-                <Menu handleMenu={handleMenu}/>
+                <Menu showMenu={showMenu} handleMenu={handleMenu}/>
             </Sider>
             <Layout>
                 <Header handleMenu={handleMenu}/>
