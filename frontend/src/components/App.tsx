@@ -8,14 +8,17 @@ import { Header, Content } from './layout'
 
 const App: React.FC = () => {
     const { Sider } = Layout
-    let [showMenu, setShowMenu] = useState(true)
-    const handleMenu = () => setShowMenu(!showMenu)
+    let [showMenu, setShowMenu] = useState(false)
+    const handleMenu =
+        (action: boolean = !showMenu): void => setShowMenu(action)
+
     return (
         <Layout>
             <Sider theme="light"
-                   collapsed={showMenu}
+                   collapsed={!showMenu}
                    collapsedWidth={0}>
-                <Menu showMenu={showMenu} handleMenu={handleMenu}/>
+                <Menu showMenu={showMenu}
+                      handleMenu={handleMenu}/>
             </Sider>
             <Layout>
                 <Header handleMenu={handleMenu}/>
