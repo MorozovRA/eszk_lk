@@ -2,7 +2,7 @@ import React from 'react'
 import {Layout, Row, Col, Typography} from 'antd'
 import {UsergroupAddOutlined} from '@ant-design/icons'
 
-const Roles = () => {
+const Roles: React.FC = () => {
     const {Title} = Typography
     return (
         <Layout>

@@ -2,7 +2,7 @@ import React from 'react'
 import {Layout, Row, Col, Typography} from 'antd'
 import {HomeOutlined} from '@ant-design/icons'
 
-const Home = () => {
+const Home: React.FC = () => {
     const {Title} = Typography
     return (
         <Layout>
