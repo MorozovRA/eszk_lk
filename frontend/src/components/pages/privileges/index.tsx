@@ -6,14 +6,10 @@ const Privileges = () => {
     const { Title } = Typography
     return (
         <Layout>
-            <Row gutter={[10, 0]}>
-                <Col>
-                    <LockOpen style={{fontSize: 32, fill: '#7F8391'}}/>
-                </Col>
-                <Col>
-                    <Title style={{fontSize: 30}}>Привелегии</Title>
-                </Col>
-            </Row>
+            <Title className="title-page">
+                <LockOpen/>
+                <span>Привелегии</span>
+            </Title>
         </Layout>
     )
 }

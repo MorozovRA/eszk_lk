@@ -2,6 +2,7 @@ import React from 'react'
 import { Layout, Row, Col, Typography } from 'antd'
 import { Menu as MenuIcon } from '@material-ui/icons'
 import { ReactComponent as Logo } from '../../assets/images/logo.svg'
+import { Link } from 'react-router-dom'
 
 interface IHeader {
     handleMenu: () => void
@@ -12,16 +13,8 @@ const Header: React.FC<IHeader> = ({ handleMenu }) => {
     const { Title } = Typography
 
     return (
-        <Header style={{
-            zIndex: 10,
-            background: '#ffffff',
-            position: 'fixed',
-            padding: '0 30px',
-            width: '100%',
-            height: '80px',
-            boxShadow: '0px 8px 8px rgba(0, 0, 0, 0.05)'
-        }}>
-            <Row gutter={[20, 20]} style={{marginTop: 12}}>
+        <Header className="header">
+            <Row gutter={[20, 20]}>
                 <Col>
                     <MenuIcon style={{cursor: 'pointer'}}
                               fontSize="large"
@@ -31,7 +24,9 @@ const Header: React.FC<IHeader> = ({ handleMenu }) => {
                     <Logo/>
                 </Col>
                 <Col>
-                    <Title level={3}>Кабинет ЕСЗК</Title>
+                    <Link to='/'>
+                        <Title level={3}>Кабинет ЕСЗК</Title>
+                    </Link>
                 </Col>
             </Row>
         </Header>
