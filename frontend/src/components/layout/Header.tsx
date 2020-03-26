@@ -5,7 +5,7 @@ import { ReactComponent as Logo } from '../../assets/images/logo.svg'
 import { Link } from 'react-router-dom'
 
 interface IHeader {
-    handleMenu: () => void
+    handleMenu: (action?: boolean) => void
 }
 
 const Header: React.FC<IHeader> = ({ handleMenu }) => {
@@ -18,7 +18,7 @@ const Header: React.FC<IHeader> = ({ handleMenu }) => {
                 <Col>
                     <MenuIcon style={{cursor: 'pointer'}}
                               fontSize="large"
-                              onClick={handleMenu}/>
+                              onClick={() => handleMenu(true)}/>
                 </Col>
                 <Col style={{marginLeft: '1%'}}>
                     <Logo/>
