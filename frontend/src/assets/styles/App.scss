@@ -2,6 +2,7 @@
 
 .header {
   z-index: 10;
+  vertical-align: middle;
   background: #ffffff;
   position: fixed;
   padding: 22px 30px;
@@ -13,7 +14,7 @@
 
 .title-page > *{
   vertical-align: middle;
-  font-size: 1.5vw !important;
+  font-size: 24px !important;
   margin: 0 4px;
   fill: #7F8391 !important;
   font-weight: 400;
