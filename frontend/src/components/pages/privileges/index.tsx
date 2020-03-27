@@ -1,6 +1,6 @@
 import React, {useEffect, useState, useRef} from 'react'
 import ReactDDM from 'react-dom'
-import {Layout, Row, Col, Typography, Card, Table, Button, Input, Divider} from 'antd'
+import {Layout, Row, Col, Typography, Card, Table} from 'antd'
 import headerPrivileges from './headerPrivileges.json'
 import headerAlias from './headerAlias.json'
 import { LockOpen } from '@material-ui/icons'
@@ -27,7 +27,10 @@ const Privileges: React.FC = () => {
     }
     useEffect(() => {
         headerPrivileges.push(actionColumn)
-    }, [])
+        return () => {
+            headerPrivileges.splice(-1,1)
+        }
+    }, [actionColumn])
 
     useEffect(() => {
         const editCardElement =
