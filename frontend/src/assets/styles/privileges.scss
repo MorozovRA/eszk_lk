@@ -1,0 +1,11 @@
+.editCard {
+  transition: margin-left 2s;
+}
+
+.openEditCard {
+  margin-left: 5% !important;
+}
+
+.closeEditCard {
+  margin-left: -30% !important;
+}

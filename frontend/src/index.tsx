@@ -6,13 +6,17 @@ import App from './components/App'
 import * as serviceWorker from './serviceWorker'
 import {BrowserRouter} from 'react-router-dom'
 import reducer from './reducers'
+import { ConfigProvider } from 'antd'
+import ruRU from 'antd/es/locale/ru_RU';
 
 const store = createStore(reducer)
 
 ReactDOM.render(
     <Provider store={store}>
         <BrowserRouter>
-            <App/>
+            <ConfigProvider locale={ruRU}>
+                <App/>
+            </ConfigProvider>
         </BrowserRouter>
     </Provider>,
     document.getElementById('root')

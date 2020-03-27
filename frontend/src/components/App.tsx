@@ -8,7 +8,7 @@ import { Header, Content } from './layout'
 
 const App: React.FC = () => {
     const { Sider } = Layout
-    let [showMenu, setShowMenu] = useState(true)
+    let [showMenu, setShowMenu] = useState<boolean>(true)
     const handleMenu = () => setShowMenu(!showMenu)
     return (
         <Layout>
