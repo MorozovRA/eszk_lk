@@ -1,15 +1,14 @@
 import React from 'react'
-import {Layout, Row, Col, Typography} from 'antd'
+import {Layout} from 'antd'
 import {HomeOutlined} from '@ant-design/icons'
 
 const Home: React.FC = () => {
-    const {Title} = Typography
     return (
         <Layout>
-            <Title className="title-page">
+            <p className="title-page">
                 <HomeOutlined/>
                 <span>Главная страница</span>
-            </Title>
+            </p>
         </Layout>
     )
 }

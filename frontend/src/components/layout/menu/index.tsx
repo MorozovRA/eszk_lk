@@ -34,7 +34,7 @@ const MainMenu: React.FC<IMenu> = ({ showMenu, handleMenu }) => {
     return (
         <Menu
             ref={menu}
-            style={{height: '100vh', zIndex: 1000}}
+            style={{height: '100vh'}}
             theme="light"
             mode="inline"
             selectedKeys={[getCurrentRouteIndex()]}

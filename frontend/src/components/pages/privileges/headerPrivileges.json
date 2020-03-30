@@ -5,10 +5,12 @@
   },
   {
     "title": "Привилегия",
-    "dataIndex": "privileges"
+    "dataIndex": "privileges",
+    "width": "50vh"
   },
   {
     "title": "Псевдоним",
-    "dataIndex": "alias"
+    "dataIndex": "alias",
+    "width": "40vh"
   }
 ]

@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button, Card, Col, Divider, Input, Layout, Row} from 'antd'
+import {Button, Input, Card, Divider} from 'antd'
 
 interface IEditCard {
     editPrivilege: any,
@@ -14,39 +14,35 @@ const EditCard: React.FC<IEditCard> =
          savePrivilege
     }) => {
     return (
-        <Layout>
+        <div>
             {editPrivilege &&
-            <Card title="Редактрование"
-                  headStyle={{
-                      background: 'rgb(250, 250, 250)'
-                  }}
-                  extra={'ID ' + editPrivilege.id}>
-                <Input
-                    value={editPrivilege.privileges}
-                    onChange={(e) => {
-                        setEditPrivilege({
-                            ...editPrivilege,
-                            privileges: e.target.value
-                        })
-                    }}
-                />
-                <Divider style={{marginBottom: 15}}/>
-                <Row gutter={[10, 0]} justify="end">
-                    <Col>
+                <Card title="Редактрование" 
+                        size="small"
+                        extra={'ID ' + editPrivilege.id}>
+                    <Input
+                        placeholder="Привелегия"
+                        value={editPrivilege.privileges}
+                        onChange={(e) => {
+                            setEditPrivilege({
+                                ...editPrivilege,
+                                privileges: e.target.value
+                            })
+                        }}
+                    />
+                    <div className="ant-modal-footer mt-2">
                         <Button
                             onClick={() => setEditPrivilege(null)}>
                             Отменить
                         </Button>
-                    </Col>
-                    <Col>
                         <Button
                             onClick={savePrivilege}
-                            type="primary">Сохранить</Button>
-                    </Col>
-                </Row>
-            </Card>
+                            type="primary">
+                                Сохранить
+                        </Button>
+                    </div>
+                </Card>
             }
-        </Layout>
+        </div>
     )
 }
 

@@ -13,20 +13,36 @@ const App: React.FC = () => {
         (action: boolean = !showMenu): void => setShowMenu(action)
 
     return (
-        <Layout>
+        <div style={{minHeight: '100vh'}}>
             <Sider theme="light"
-                   collapsed={!showMenu}
-                   collapsedWidth={0}>
+                style={{
+                    zIndex: 1100
+                }}
+                className="position-fixed"
+                collapsed={!showMenu}
+                collapsedWidth={0}>
                 <Menu showMenu={showMenu}
-                      handleMenu={handleMenu}/>
+                    handleMenu={handleMenu}/>
             </Sider>
-            <Layout>
+            <div>
                 <Header handleMenu={handleMenu}/>
                 <Content>
                     {renderRoutes(router)}
                 </Content>
-            </Layout>
-        </Layout>
+            </div>
+        </div>
+
+        //     {/* <Sider theme="light"
+        //            collapsed={!showMenu}
+        //            collapsedWidth={0}>
+        //         <Menu showMenu={showMenu}
+        //               handleMenu={handleMenu}/>
+        //     </Sider> */}
+                
+        //         {/* <Content>
+        //             {renderRoutes(router)}
+        //         </Content> */}
+        // // </Layout>
     )
 }
 

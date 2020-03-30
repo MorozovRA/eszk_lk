@@ -1,11 +1,22 @@
-.editCard {
-  transition: margin-left 2s;
+.card-header {
+  font-size: 0.8em;
+  font-family: 'Roboto', sans-serif;
 }
 
-.openEditCard {
-  margin-left: 5% !important;
+.ant-table-cell {
+  padding-left: 4vh !important;
 }
 
-.closeEditCard {
-  margin-left: -30% !important;
+tbody > tr > .ant-table-cell{
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9em;
+}
+
+thead > tr > * {
+  font-family: 'Roboto-Medium', sans-serif;
+  font-size: 1.2em;
+}
+
+.table-action-button{
+  font-size: 0.9em !important;
 }

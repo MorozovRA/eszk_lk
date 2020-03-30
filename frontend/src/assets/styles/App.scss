@@ -1,21 +1,22 @@
 @import "~antd/dist/antd.css";
+@import "~bootstrap/scss/bootstrap.scss";
+@import "fonts/Roboto/Roboto";
 
-.header {
-  z-index: 10;
-  vertical-align: middle;
-  background: #ffffff;
-  position: fixed;
-  padding: 22px 30px;
-  width: 100%;
-  height: 80px;
-  box-shadow: 5px 0 5px 5px rgba(0, 0, 0, 0.05);
-  user-select: none;
+body{
+  font-family: 'Roboto', sans-serif;
 }
 
-.title-page > *{
-  vertical-align: middle;
-  font-size: 24px !important;
-  margin: 0 4px;
-  fill: #7F8391 !important;
-  font-weight: 400;
+.title-page{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5em;
+}
+
+.table-name{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3em !important;
+}
+
+.header{
+  min-height: 64px;
+  max-height: 64px;
 }
